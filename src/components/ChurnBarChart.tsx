@@ -26,15 +26,19 @@ const CustomTooltip = ({
   active,
   payload,
   label,
-}: TooltipProps<number, string>) => {
+}: {
+  active?: boolean;
+  payload?: Array<{ value: number; payload: { customers: number } }>;
+  label?: string;
+}) => {
   if (active && payload && payload.length) {
     return (
       <div className="chart-tooltip">
         <p className="tooltip-label">{label}</p>
-        <p className="tooltip-churn">
+        <p style={{ color: "#f87171" }}>
           Churn: <strong>{payload[0]?.value}%</strong>
         </p>
-        <p className="tooltip-customers">
+        <p style={{ color: "#9ca3af" }}>
           Customers: <strong>{payload[0]?.payload?.customers}</strong>
         </p>
       </div>
