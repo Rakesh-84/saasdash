@@ -41,7 +41,7 @@ export async function getSheetData(): Promise<SheetRow[]> {
     headers.forEach((header, i) => {
       row[header] = values[i] ?? "";
     });
-    return row as SheetRow;
+  return row as unknown as SheetRow;
   });
 
   return rows;
