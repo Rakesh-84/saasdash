@@ -1,0 +1,17 @@
+.tooltip-churn {
+  color: var(--text-secondary);
+}
+
+.tooltip-churn strong {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.tooltip-customers {
+  color: var(--text-secondary);
+}
+
+.tooltip-customers strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
